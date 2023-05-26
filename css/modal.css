@@ -30,7 +30,9 @@ img {
   padding-right: 1rem;
 }
 
-
+.red {
+  color: #f00;
+}
 
 .topnav {
   overflow: hidden;

@@ -88,6 +88,7 @@ function validFirst(firstValue) {
     if (firstValue.length < 2) {
       msg = "Veuillez entrer 2 caractères ou plus pour le champ du prénom";
       visuError(divFirst, false);
+      validF = false;
       return;
     
   }
@@ -114,6 +115,7 @@ function validLast(lastValue) {
   if (lastValue.length < 2) {
     msg = "Veuillez entrer 2 caractères ou plus pour le champ du nom";
     visuError(divLast, false);
+    validL = false;
     return;
   }
     visuError(divLast, true);
@@ -145,6 +147,7 @@ function validEmail(emailValue) {
   if (testRegexpEmail == false) {
     msg = "Adresse e-mail invalide";
     visuError(divEmail, false);
+    validE = false;
     return;
   }
     visuError(divEmail, true);
@@ -162,6 +165,7 @@ function validBirthdate(birthdateValue) {
   if (birthdateValue == "") {
     msg = "Vous devez renseigner une date de naissance valide";
     visuError(divBirthdate, false);
+    validB = false;
     return;
   }
 }
@@ -188,6 +192,7 @@ function nbrTournois(){ /* Utilisé seulement lors de la validation du formulair
   if (quantity.value == ""){
     msg = "Rentrez un nombre de tournois";
     visuError(divQuantity, false);
+    validQ = false;
     return;
   }
     
@@ -226,6 +231,7 @@ function validTournois() {
   if (cc == false) {
     msg = "Vous devez cocher un tournois";
     visuError(divLocation, false);
+    validT = false;
     return;
   }
 }
