@@ -291,11 +291,11 @@ function modalvalid() {
   }
 
   const textLabel = document.querySelector(".text-label");
-  textLabel.innerHTML = "Un mail de confirmation a été envoyé à l'adresse suivante : " + infoEmail;
+  textLabel.innerHTML = `Un mail de confirmation a été envoyé à l'adresse suivante : <span class="red">${infoEmail}</span>`;
 
   // creation d'un élément <p> ds modal-body
   let element1 = document.createElement("p");
-  element1.innerHTML = "Merci " + infoFirst + " d'avoir participé";
+  element1.innerHTML = `Merci <span class="red">${infoFirst}</span> d'avoir participé`;
   const modalBody = document.querySelector(".modal-body");
   modalBody.prepend(element1);
 
