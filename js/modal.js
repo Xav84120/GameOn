@@ -30,6 +30,7 @@ let msg = "";
 /* Creation de la variable pour la validation du prénom. Par défaut elle est à false */
 let valid = false;
 
+/* Creation de variables de validation spécifique aux inputs */
 let validF = false;
 let validL = false;
 let validE = false;
