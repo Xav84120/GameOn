@@ -178,7 +178,7 @@ birthdate.addEventListener("input", () => {
 });
 
 /****************************************** NOMBRE DE CONCOURS ******************************************************/
-// DEMANDER CAR AVEC LE TYPE=NUMBER ON NE PEUT DEJA RENTRER QUE DES QUANTITES,
+
 const divQuantity = formulaire.getElementsByClassName("formData")[4];
 const quantity = document.getElementById("quantity");
 
@@ -198,10 +198,6 @@ function nbrTournois(){ /* Utilisé seulement lors de la validation du formulair
   }
     
 };
-
-
-
-
 
 
 
@@ -261,7 +257,7 @@ function validCheckConditions() {
 
 /********************************************** VALIDATION DU FORMULAIRE **************************************************/
 
-const formDataArray = Array.from(formData);
+const formDataArray = Array.from(formData); /* Va servir dans modalvalid() */
 const btnValid = document.getElementById("btnValid");
 
 // Ecoute evt sur btnValid
@@ -286,7 +282,8 @@ const btnValid = document.getElementById("btnValid");
 // Déclaration de la fonction modalValid
 function modalvalid() {
   modalbg.style.display = "block";
-    // Effacer les différentes entrées du formulaire et ne garder que le bouton submit
+
+  // Effacer les différentes entrées du formulaire.
   for (let i = 0; i < formDataArray.length; ++i) {
     formDataArray[i].remove();
   }
